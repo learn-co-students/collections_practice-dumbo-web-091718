@@ -13,6 +13,7 @@ end
 
 def swap_elements(array)
     array[1], array[2] = array[2], array[1]
+    array
 end
 
 def reverse_array(array)
@@ -34,5 +35,7 @@ def sum_array(array)
 end
 
 def add_s(array)
-   
+    array.each_with_index do |item, index|
+        item[item.length] = "s" unless index == 1
+    end
 end
